@@ -1,0 +1,25 @@
+.navbar {
+    background-color: #005CAA;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.list {
+    align-items: center;
+    display: flex;
+    list-style: none;
+}
+
+.item {
+    margin-right: 1em;
+}
+
+.item a {
+    color: #EEEEEE;
+    text-decoration: none;
+}
+
+.item a:hover {
+    color: #FFBB33;
+}
