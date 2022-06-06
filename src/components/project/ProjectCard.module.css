@@ -53,3 +53,35 @@
 .category_text .planejamento {
     background-color: #FBE7C6;
 }
+
+.project_card_actions {
+    align-items: center;
+    display: flex;
+    margin-top: 1.2em;
+}
+
+.project_card_actions a,
+.project_card_actions button {
+    align-items: center;
+    border: none;
+    background-color: #FFFFFF;
+    border: 1px solid #1073C7;
+    color: #1073C7;
+    display: flex;
+    font-size: .9em;
+    justify-content: center;
+    margin-right: 1em;
+    padding: .6em 1em;cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.project_card_actions svg {
+    margin-right: .5em;
+}
+
+.project_card_actions a:hover,
+.project_card_actions button:hover {
+    background-color: #1073C7;
+    color: #FFBB33;
+}
