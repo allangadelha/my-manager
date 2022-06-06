@@ -4,7 +4,13 @@ import { Link } from 'react-router-dom';
 
 function ProjectCard({ id, name, valueProject, category, handleRemove }) {
 
-    
+    const remove = (e) => {
+
+        e.preventDefault()
+        handleRemove(id)
+
+    }
+
     return (
 
         <div className={styles.project_card}>
@@ -17,7 +23,7 @@ function ProjectCard({ id, name, valueProject, category, handleRemove }) {
                 <Link to='/'>
                     <BsPencil /> Editar
                 </Link>
-                <button>
+                <button onClick={remove}>
                     <BsTrashFill /> Remover
                 </button>
             </div>
