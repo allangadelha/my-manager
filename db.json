@@ -32,17 +32,6 @@
       "manager": 0,
       "services": [],
       "id": 3
-    },
-    {
-      "name": "Teste 04",
-      "valueProject": "12000",
-      "category": {
-        "id": "3",
-        "name": "Design"
-      },
-      "manager": 0,
-      "services": [],
-      "id": 4
     }
   ],
   "categories": [
