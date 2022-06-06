@@ -13,13 +13,6 @@
     },
     {
       "name": "Teste 02",
-      "valueProject": "10000",
-      "manager": 0,
-      "services": [],
-      "id": 2
-    },
-    {
-      "name": "Teste 03",
       "valueProject": "2500",
       "category": {
         "id": "4",
@@ -27,56 +20,18 @@
       },
       "manager": 0,
       "services": [],
-      "id": 3
+      "id": 2
     },
     {
-      "name": "test 04",
+      "name": "Teste 03",
       "valueProject": "20000",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
       "manager": 0,
       "services": [],
-      "id": 4
-    },
-    {
-      "name": "ALLAN GADELHA XAVIER",
-      "valueProject": "1111",
-      "manager": 0,
-      "services": [],
-      "id": 5
-    },
-    {
-      "name": "ALLAN GADELHA XAVIER",
-      "valueProject": "111111",
-      "manager": 0,
-      "services": [],
-      "id": 6
-    },
-    {
-      "name": "ALLAN GADELHA XAVIER",
-      "valueProject": "1111",
-      "manager": 0,
-      "services": [],
-      "id": 7
-    },
-    {
-      "name": "ALLAN GADELHA XAVIER",
-      "valueProject": "1111",
-      "manager": 0,
-      "services": [],
-      "id": 8
-    },
-    {
-      "name": "ALLAN GADELHA XAVIER",
-      "valueProject": "1111",
-      "manager": 0,
-      "services": [],
-      "id": 9
-    },
-    {
-      "name": "ALLAN GADELHA XAVIER",
-      "valueProject": "1111",
-      "manager": 0,
-      "services": [],
-      "id": 10
+      "id": 3
     }
   ],
   "categories": [

@@ -1,0 +1,55 @@
+.project_card {
+    border: 1px solid #1073C7;
+    border-radius: 5px;
+    margin: 0.5%;
+    padding: 1em;
+    width: 24%;
+}
+
+.project_card h4 {
+    background-color: #1073C7;
+    color: #FFBB33;
+    font-size: 1.3em;
+    margin-bottom: 1.3em;
+    padding: .4em;
+}
+
+.project_card p {
+    color: #7A7A7A;
+    font-size: 1.3em;
+    margin-bottom: 1em;
+}
+
+.project_card p span{
+    font-weight: bold;
+}
+
+.category_text {
+    align-items: center;
+    display: flex;
+}
+
+.category_text span {
+    display: block;
+    background-color: #CCCCCC;
+    border-radius: 50%;
+    height: 12px;
+    margin-right: 5px;
+    width: 12px;
+}
+
+.category_text .infra {
+    background-color: #FFAEBC;
+}
+
+.category_text .desenvolvimento {
+    background-color: #A0E7E5;
+}
+
+.category_text .design {
+    background-color: #B4F8C8;
+}
+
+.category_text .planejamento {
+    background-color: #FBE7C6;
+}
