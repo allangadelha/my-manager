@@ -8,7 +8,7 @@ function NewProject() {
     const history = useNavigate()
 
   function createPost(project) {
-    project.manager = 0
+    project.valueService = 0
     project.services = []
 
     fetch('http://localhost:5000/projects', {
