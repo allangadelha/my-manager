@@ -115,7 +115,31 @@ function Project() {
 
     }
 
-    function removeService(service) {
+    function removeService(id, valueService) {
+
+        const serviceUpdated = project.services.filter(
+            (service) => service.id !== id
+        )
+
+        const projectUpdated = project;
+
+        projectUpdated.services = serviceUpdated;
+        projectUpdated.valueService = parseFloat(projectUpdated.valueService) - parseFloat(valueService);
+
+        fetch(`http://localhost:5000/projects/${projectUpdated.id}`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(projectUpdated)
+        })
+        .then((resp) => resp.json())
+        .then((data) => {
+            setProject(projectUpdated);
+            setServices(serviceUpdated);
+            setMessage('Serviço removido com sucesso!')
+        })
+        .catch(err => console.log(err))
 
     }
 
