@@ -1,3 +1,4 @@
+import { parse, v4 as uuidv4 } from 'uuid';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
@@ -8,6 +9,7 @@ import Container from '../layout/Container';
 import Message from '../layout/Message';
 
 import ProjectForm from '../project/ProjectForm';
+import ServiceForm from '../service/ServiceForm';
 
 function Project() {
 
@@ -49,7 +51,7 @@ function Project() {
 
         setMessage('')
 
-        if (project.valueProject < project.manager) {
+        if (project.valueProject < project.valueService) {
             setMessage("O orçamento não pode ser menor que o custo do projeto")
             setTypeMessage("error")
             return false
@@ -70,6 +72,41 @@ function Project() {
                 setTypeMessage("success")
             })
             .catch(err => console.log(err))
+    }
+
+    function createService(project) {
+
+        setMessage('');
+
+        const lastService = project.services[project.services.length - 1];
+
+        lastService.id = uuidv4();
+
+        const lastServiceValueService = lastService.valueService;
+
+        const newValueService = parseFloat(project.valueService) + parseFloat(lastServiceValueService);
+        if (newValueService > parseFloat(project.valueProject)) {
+            setMessage('Valor superior ao do orçamento! Verifique o valor do serviço.');
+            setTypeMessage('error')
+            project.services.pop()
+            return false
+        }
+
+        project.valueProject = newValueService;
+
+        fetch(`http://localhost:5000/projects/${project.id}`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(project)
+        })
+        .then((resp) => resp.json())
+        .then((data) => {
+            console.log(data)
+        })
+        .catch(err => console.log(err))
+
     }
 
 
@@ -94,7 +131,7 @@ function Project() {
                                         <span>Total do Orçamento:</span> R$ {project.valueProject}
                                     </p>
                                     <p>
-                                        <span>Total utilizado:</span> R$ {project.manager}
+                                        <span>Total utilizado:</span> R$ {project.valueService}
                                     </p>
                                 </div>
                             ) : (
@@ -110,11 +147,15 @@ function Project() {
                         <div className={styles.service_form_container}>
                             <h2>Adicionar serviço:</h2>
                             <button className={styles.btn} onClick={toggleServiceForm}>
-                                {!showServiceForm ? 'Adicionar serviço': 'Fechar'}
+                                {!showServiceForm ? 'Adicionar serviço' : 'Fechar'}
                             </button>
                             <div className={styles.project_info}>
                                 {showServiceForm && (
-                                    <p>formulario do serviço</p>
+                                    <ServiceForm
+                                        handleSubmit={createService}
+                                        btnText="Adicionar serviço"
+                                        projectData={project}
+                                    />
                                 )}
                             </div>
                         </div>

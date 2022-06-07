@@ -2,13 +2,62 @@
   "projects": [
     {
       "name": "Teste 01",
-      "valueProject": "750000",
+      "valueProject": 100,
       "category": {
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "manager": 0,
-      "services": [],
+      "valueService": 0,
+      "services": [
+        {
+          "name": "Teste novo",
+          "valueService": "100",
+          "description": "Teste de adição de serviço",
+          "id": "001261d4-8076-431b-9b06-2c77f1361e93"
+        },
+        {
+          "name": "Consultar contratos",
+          "valueService": "100",
+          "description": "Teste de adição de serviço",
+          "id": "ccd42f58-2fbb-4c54-a248-7f90dc62a46a"
+        },
+        {
+          "name": "Consultar contratos",
+          "valueService": "100",
+          "description": "Teste de adição de serviço",
+          "id": "ccd42f58-2fbb-4c54-a248-7f90dc62a46a"
+        },
+        {
+          "name": "Consultar contratos",
+          "valueService": "100",
+          "description": "Teste de adição de serviço",
+          "id": "ccd42f58-2fbb-4c54-a248-7f90dc62a46a"
+        },
+        {
+          "name": "Consultar contratos",
+          "valueService": "100",
+          "description": "Teste de adição de serviço",
+          "id": "ccd42f58-2fbb-4c54-a248-7f90dc62a46a"
+        },
+        {
+          "name": "Consultar contratos",
+          "valueService": "100",
+          "description": "Teste de adição de serviço",
+          "id": "ccd42f58-2fbb-4c54-a248-7f90dc62a46a"
+        },
+        {
+          "name": "Consultar contratos",
+          "valueService": "100",
+          "description": "Teste de adição de serviço222",
+          "id": "af88fad7-9fbe-4ec2-b546-86aa1963e456"
+        },
+        {
+          "name": "Consultar contratos",
+          "valueService": "100",
+          "description": "Teste de adição de serviço222",
+          "id": "8012dd77-f1f2-4382-b253-2b248c123b58"
+        }
+      ],
       "id": 1
     },
     {
@@ -18,7 +67,7 @@
         "id": "4",
         "name": "Planejamento"
       },
-      "manager": 0,
+      "valueService": 0,
       "services": [],
       "id": 2
     },
@@ -29,7 +78,7 @@
         "id": "1",
         "name": "Infra"
       },
-      "manager": 0,
+      "valueService": 0,
       "services": [],
       "id": 3
     }
