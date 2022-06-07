@@ -4,7 +4,8 @@ import styles from './ServiceCard.module.css';
 function ServiceCard({ id, name, valueService, description, handleRemove }) {
 
     const remove = (e) => {
-        
+        e.preventDefault()
+        handleRemove(id, valueService)
     }
 
     return (

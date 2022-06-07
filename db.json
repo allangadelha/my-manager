@@ -48,27 +48,8 @@
         "id": "1",
         "name": "Infra"
       },
-      "valueService": 6898,
-      "services": [
-        {
-          "name": "Revisão no servidor",
-          "valueService": "5000",
-          "description": "Vai dar certo",
-          "id": "c4cc0ed9-fb36-46fb-974d-bb1d193bbca9"
-        },
-        {
-          "name": "Almoço dos caras",
-          "valueService": "900",
-          "description": "Rango do pessoal",
-          "id": "9c3d75f8-48b9-473d-b1b2-2e33df158e8f"
-        },
-        {
-          "name": "Novo serviços 10",
-          "valueService": "998",
-          "description": "Teste de adição de serviço",
-          "id": "2dd0927e-5973-4730-8978-515840012a7d"
-        }
-      ],
+      "valueService": 0,
+      "services": [],
       "id": 3
     }
   ],
