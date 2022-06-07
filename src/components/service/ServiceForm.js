@@ -7,21 +7,6 @@ import styles from './ServiceForm.module.css';
 function ServiceForm({ handleSubmit, btnText, projectData }) {
 
     const [service, setService] = useState([]);
-    // const [project, setProject] = useState(projectData || {});
-    
-    // useEffect(() => {
-    //     fetch('http://localhost:5000/categories', {
-    //         method: "GET",
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //         },
-    //     })
-    //         .then((resp) => resp.json())
-    //         .then((data) => {
-    //             setCategories(data)
-    //         })
-    //         .catch((err) => console.log(`Error: ${err}`))
-    // }, []);
 
     const submit = (e) => {
         e.preventDefault();

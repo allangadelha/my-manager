@@ -1,0 +1,87 @@
+.service_card {
+    border: 1px solid #1073C7;
+    border-radius: 5px;
+    margin: 0.5%;
+    padding: 1em;
+    width: 24%;
+}
+
+.service_card h4 {
+    background-color: #1073C7;
+    color: #FFBB33;
+    font-size: 1.3em;
+    margin-bottom: 1.3em;
+    padding: .4em;
+}
+
+.service_card p {
+    color: #7A7A7A;
+    font-size: 1.3em;
+    margin-bottom: 1em;
+}
+
+.service_card p span{
+    font-weight: bold;
+}
+
+.category_text {
+    align-items: center;
+    display: flex;
+}
+
+.category_text span {
+    display: block;
+    background-color: #CCCCCC;
+    border-radius: 50%;
+    height: 12px;
+    margin-right: 5px;
+    width: 12px;
+}
+
+.category_text .infra {
+    background-color: #FFAEBC;
+}
+
+.category_text .desenvolvimento {
+    background-color: #A0E7E5;
+}
+
+.category_text .design {
+    background-color: #B4F8C8;
+}
+
+.category_text .planejamento {
+    background-color: #FBE7C6;
+}
+
+.service_card_actions {
+    align-items: center;
+    display: flex;
+    margin-top: 1.2em;
+}
+
+.service_card_actions a,
+.service_card_actions button {
+    align-items: center;
+    border: none;
+    background-color: #FFFFFF;
+    border: 1px solid #1073C7;
+    color: #1073C7;
+    display: flex;
+    font-size: .9em;
+    justify-content: center;
+    margin-right: 1em;
+    padding: .6em 1em;cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.service_card_actions svg {
+    margin-right: .5em;
+}
+
+.service_card_actions a:hover,
+.service_card_actions button:hover {
+    background-color: #1073C7;
+    color: #FFBB33;
+}

@@ -2,60 +2,30 @@
   "projects": [
     {
       "name": "Teste 01",
-      "valueProject": 100,
+      "valueProject": 1000,
       "category": {
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "valueService": 0,
+      "valueService": 930,
       "services": [
         {
-          "name": "Teste novo",
-          "valueService": "100",
-          "description": "Teste de adição de serviço",
-          "id": "001261d4-8076-431b-9b06-2c77f1361e93"
+          "name": "Serviço 01",
+          "valueService": "900",
+          "description": "Descrição 01",
+          "id": "e0818e6d-8fec-43c5-9e0a-a19454f293a9"
         },
         {
-          "name": "Consultar contratos",
-          "valueService": "100",
-          "description": "Teste de adição de serviço",
-          "id": "ccd42f58-2fbb-4c54-a248-7f90dc62a46a"
+          "name": "Serviço 02",
+          "valueService": "10",
+          "description": "Descrição 02",
+          "id": "6355135c-e9dd-4ead-9150-1920ca75d725"
         },
         {
-          "name": "Consultar contratos",
-          "valueService": "100",
-          "description": "Teste de adição de serviço",
-          "id": "ccd42f58-2fbb-4c54-a248-7f90dc62a46a"
-        },
-        {
-          "name": "Consultar contratos",
-          "valueService": "100",
-          "description": "Teste de adição de serviço",
-          "id": "ccd42f58-2fbb-4c54-a248-7f90dc62a46a"
-        },
-        {
-          "name": "Consultar contratos",
-          "valueService": "100",
-          "description": "Teste de adição de serviço",
-          "id": "ccd42f58-2fbb-4c54-a248-7f90dc62a46a"
-        },
-        {
-          "name": "Consultar contratos",
-          "valueService": "100",
-          "description": "Teste de adição de serviço",
-          "id": "ccd42f58-2fbb-4c54-a248-7f90dc62a46a"
-        },
-        {
-          "name": "Consultar contratos",
-          "valueService": "100",
-          "description": "Teste de adição de serviço222",
-          "id": "af88fad7-9fbe-4ec2-b546-86aa1963e456"
-        },
-        {
-          "name": "Consultar contratos",
-          "valueService": "100",
-          "description": "Teste de adição de serviço222",
-          "id": "8012dd77-f1f2-4382-b253-2b248c123b58"
+          "name": "Serviço 03",
+          "valueService": "20",
+          "description": "Descrição 03",
+          "id": "610da332-762a-48b7-94b5-c80c58a1222d"
         }
       ],
       "id": 1
@@ -78,8 +48,27 @@
         "id": "1",
         "name": "Infra"
       },
-      "valueService": 0,
-      "services": [],
+      "valueService": 6898,
+      "services": [
+        {
+          "name": "Revisão no servidor",
+          "valueService": "5000",
+          "description": "Vai dar certo",
+          "id": "c4cc0ed9-fb36-46fb-974d-bb1d193bbca9"
+        },
+        {
+          "name": "Almoço dos caras",
+          "valueService": "900",
+          "description": "Rango do pessoal",
+          "id": "9c3d75f8-48b9-473d-b1b2-2e33df158e8f"
+        },
+        {
+          "name": "Novo serviços 10",
+          "valueService": "998",
+          "description": "Teste de adição de serviço",
+          "id": "2dd0927e-5973-4730-8978-515840012a7d"
+        }
+      ],
       "id": 3
     }
   ],
