@@ -10,12 +10,14 @@ import Message from '../layout/Message';
 
 import ProjectForm from '../project/ProjectForm';
 import ServiceForm from '../service/ServiceForm';
+import ServiceCard from '../service/ServiceCard';
 
 function Project() {
 
     const { id } = useParams();
 
     const [project, setProject] = useState([]);
+    const [services, setServices] = useState([]);
     const [showProjectForm, setShowProjectForm] = useState(false);
     const [showServiceForm, setShowServiceForm] = useState(false);
     const [message, setMessage] = useState();
@@ -33,7 +35,10 @@ function Project() {
 
             })
                 .then((resp) => resp.json())
-                .then((data) => setProject(data))
+                .then((data) => {
+                    setProject(data)
+                    setServices(data.services)
+                })
                 .catch((err) => console.log(`Algo de errado aconteceu ${err}`))
         }, 300);
 
@@ -85,6 +90,7 @@ function Project() {
         const lastServiceValueService = lastService.valueService;
 
         const newValueService = parseFloat(project.valueService) + parseFloat(lastServiceValueService);
+        
         if (newValueService > parseFloat(project.valueProject)) {
             setMessage('Valor superior ao do orçamento! Verifique o valor do serviço.');
             setTypeMessage('error')
@@ -92,7 +98,7 @@ function Project() {
             return false
         }
 
-        project.valueProject = newValueService;
+        project.valueService = newValueService;
 
         fetch(`http://localhost:5000/projects/${project.id}`, {
             method: 'PATCH',
@@ -103,9 +109,13 @@ function Project() {
         })
         .then((resp) => resp.json())
         .then((data) => {
-            console.log(data)
+            setShowServiceForm(false)
         })
         .catch(err => console.log(err))
+
+    }
+
+    function removeService(service) {
 
     }
 
@@ -156,12 +166,27 @@ function Project() {
                                         btnText="Adicionar serviço"
                                         projectData={project}
                                     />
-                                )}
+                            )}
                             </div>
                         </div>
                         <h2>Serviços</h2>
                         <Container customClass="start">
-                            <p>Listagem de serviços</p>
+                            {services.length > 0 &&
+                                services.map((service) => (
+                                    <ServiceCard
+                                        key={service.id}
+                                        id={service.id}
+                                        name={service.name}
+                                        valueService={service.valueService}
+                                        description={service.description}
+                                        handleRemove={removeService}
+                                    />
+                                ))
+
+                            }
+                            {services.length === 0 &&
+                                <p>Não há serviços cadastrados.</p>
+                            }
                         </Container>
                     </Container>
                 </div>
